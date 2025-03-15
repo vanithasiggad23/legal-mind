@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalMind - Unlocking Legal Insights with AI</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="../static/image/cornerpage.png" alt="LegalMind Logo">
+        <h1>LEGALMIND - UNLOCKING LEGAL INSIGHTS WITH AI</h1>
+    </header>
+
+    <div class="container">
+        <div class="title">LegalMind: Power of AI to provide legal insights</div>
+        <div class="card-container">
+            <div class="card" onclick="openModal('login','police')">
+                <img src="../static/image/police.jpg" alt="Police Login">
+                <p>Police Login</p>
+            </div>
+
+            <div class="card" onclick="openModal('login','legal Professional')">
+                <img src="../static/image/legalproffe.jpg" alt="Legal Professional Login">
+                <p>Legal-Profession Login</p>
+            </div>
+
+            <div class="card" onclick="openModal('login','public')">
+                <img src="../static/image/public.png" alt="Public Login">
+                <p>Public Login</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <!-- Login Form -->
+            <div id="login-form" class="auth-form">
+                <h2>Login</h2>
+                <form id="auth-form" onsubmit="submitForm(event)">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <div class="input-container">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <span id="toggle-icon" onclick="togglePassword('password')">👁️</span>
+                    </div>
+                    <input type="hidden" id="user-type" name="user_type" value="">
+                    <button type="submit" id="submit-button">Login</button>
+                    <p id="toggle-form">
+                        Don't have an account? <a href="#" id="toggle-link" onclick="toggleForm()">Sign Up</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signup-form" class="auth-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <form id="signup-form-action" onsubmit="submitForm(event)">
+                    <input type="text" id="username-signup" name="username" placeholder="Username" required>
+                    <div class="input-container">
+                        <input type="password" id="password-signup" name="password" placeholder="Password" required>
+                        <span id="toggle-icon-signup" onclick="togglePassword('password-signup')">👁️</span>
+                    </div>
+                    <input type="email" id="e-mail-signup" name="e-mail" placeholder="Email" required><br>
+                    <input type="hidden" id="user-type-signup" name="user_type" value="">
+                    <button type="submit" id="submit-signup-button">Sign Up</button>
+                    <p id="toggle-form-signup">
+                        Already have an account? <a href="#" id="toggle-link-signup" onclick="toggleForm()">Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Use</a> |
+            <a href="#">Social Media</a> |
+            <a href="#">About</a> |
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+    <script src="../static/js/front.js"></script>
+</body>
+</html>
